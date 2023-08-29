@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Diabetes Prediction</title>
+      <style>
+        body {
+             color: blue;
+             }
+
+     </style>
+</head>
+</body>
+   <h3>Diabetes Prediction</h3>
+   <div>
+       <form action="/predict" method="POST">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+             <option value="0">Female</option>
+             <option value="1">Male</option>
+             <select>
+                 <br>
+                 <br>
+                 <label for="smoking_history">smoking history</label>
+                 <select id="smoking_history" name="smoking_history">
+                    <option value="0">No Info</option>
+                    <option value="1">current</option>
+                    <option value="2">ever</option>
+                    <option value="3">former</option>
+                    <option value="4">never</option>
+                    <option value="5">not current</option>
+                 </select>
+                 <br>
+                 <br>
+
+        <label for="age">age </label>
+        <input type="number" name="age" >btw:[1-99]
+        <br>
+        <br>
+        <label for="hypertension">hypertension </label>
+        <input type="number" name="hypertension">btw:[0-1]
+        <br>
+        <br>
+        <label for="heart_disease">heart_disease </label>
+        <input type="number" name="heart_disease">btw:[0-1]
+        <br>
+        <br>
+        <label for="bmi">bmi </label>
+        <input type="number" name="bmi" min="0.0" max="99.0" step="0.01">
+        <br>
+        <br>
+        <label for="HbA1c_level">HbA1c_level </label>
+        <input type="number" name="HbA1c_level" min="0.0" max="99.0" step="0.01"
+        <br>
+        <br>
+        <br>
+        <br>
+        <label for="blood_glucose_level">blood_glucose_level </label>
+        <input type="number" name="blood_glucose_level">
+        <br>
+        <br>
+        <input type="submit" class="btn btn-primary btn-block btn-large" value="Submit">
+        </form>
+        <br>
+        <br>
+        <h2 style="color:#E75480 !important;"> Diabetes Prediction is: {{ prediction_text }}</h2>
+        </div>
+      </body>
+      </html>
